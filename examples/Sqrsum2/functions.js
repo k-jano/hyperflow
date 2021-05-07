@@ -1,30 +1,31 @@
+const redis = require("redis");
+
+channel = 'SIMULATOR'
+channel_rcv = 'SIMULATOR_RCV'
+
 function sqr(ins, outs, context, cb) {
-    var n = Number(ins.number.data[0]);
+    console.log("---SQR---")
 
-    if (context.recovered) {
-        return cb(null, outs);
-        console.log("RECOVERY MODE!!!");
-        console.log(outs);
-    }
+    const client = redis.createClient();
 
-    /*if (n == 5) {
-        process.exit(1); // emulate crash
-    }*/
-    outs.square.data = [n * n];
-    setTimeout(function() {
-        cb(null, outs);
-    }, Math.random() * 3000);
+    key = `${context.appId}:${context.wfname}:${context.procId - 1}`
+    client.publish(channel, key)
+
+    client.on("message", function(channel, message) {
+        console.log(message);
+        console.log(channel);
+        outs.square.data = [5]
+        cb(null, outs)
+    })
+
+    client.subscribe(channel_rcv)
 }
 
 // stateful function
 var cnt=0;
 var acc=0.0;
 function sum(ins, outs, context, cb) {
-    /*if (context.recovered) {
-        return cb(null, outs);
-        console.log("RECOVERY MODE!!!");
-        console.log(outs);
-    }*/
+    console.log("---SUM---")
 
     var n=ins[0].data[0];
     acc += n;
