@@ -2,14 +2,15 @@
   "name": "hyperflow",
   "version": "1.5.6",
   "engines": {
-    "node": "~12.16.3"
+    "node": "12.6.0"
   },
   "bin": {
     "hflow": "./bin/hflow.js",
     "hflow-recovery-analysis": "./bin/hflow-recover-analyze.js"
   },
   "scripts": {
-    "start": "node bin/hflow start-server"
+    "start": "node bin/hflow start-server",
+    "hflow": "node ./bin/hflow.js run ./examples/Sqrsum2"
   },
   "dependencies": {
     "@dagrejs/graphlib": "^2.1.4",
