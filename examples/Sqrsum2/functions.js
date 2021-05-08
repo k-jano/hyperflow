@@ -1,24 +1,34 @@
-const redis = require("redis");
-
-channel = 'SIMULATOR'
-channel_rcv = 'SIMULATOR_RCV'
+const Client = require('../../pub_sub/client');
 
 function sqr(ins, outs, context, cb) {
     console.log("---SQR---")
+    // console.log(context)
 
-    const client = redis.createClient();
+    key = `${context.appId}:${context.wfname}:${context.procId - 1}:${context.firingId}`
 
-    key = `${context.appId}:${context.wfname}:${context.procId - 1}`
-    client.publish(channel, key)
+    const pub = new Client();
+    const sub = new Client(key);
 
-    client.on("message", function(channel, message) {
-        console.log(message);
-        console.log(channel);
-        outs.square.data = [5]
-        cb(null, outs)
-    })
+    pub.publish(key)
+    sub.subscribe(cb, outs)
 
-    client.subscribe(channel_rcv)
+    // var msgCount = 0
+    
+    // sub.on("message", function(channel, message) {
+    //     msgCount += 1
+    //     console.log(message);
+    //     console.log(channel);
+    //     outs.square.data = [5]
+    //     cb(null, outs)
+        
+    //     if(msgCount === 1) {
+    //         sub.unsubscribe();
+    //         sub.quit();
+    //         pub.quit();
+    //     }
+    // })
+
+    // sub.subscribe(channel_rcv)
 }
 
 // stateful function
