@@ -5,6 +5,7 @@ class Client {
     this.client = redis.createClient();
     this.channel = 'SIMULATOR';
     this.channel_rcv = channel_rcv;
+    this.msgCount = 0
   }
 
   publish(key){
@@ -18,13 +19,12 @@ class Client {
 
   subscribe(cb, outs){
     this.client.on("message", function(channel, message) {
-      msgCount += 1
-      console.log(message);
-      console.log(channel);
-      outs.square.data = [5]
-      cb(null, outs)
+      this.msgCount += 1
+      // console.log(message);
+      // console.log(channel);
+      cb(null, 'Processed')
       
-      if(msgCount === 1) {
+      if(this.msgCount === 1) {
         this.client.unsubscribe();
         this.client.quit();
       }
