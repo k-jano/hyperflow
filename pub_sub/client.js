@@ -8,8 +8,13 @@ class Client {
     this.msgCount = 0
   }
 
-  publish(key){
-    this.client.publish(this.channel, key);
+  publish(key, ins, outs){
+    const data = {
+      key: key,
+      ins: ins,
+      outs: outs
+    }
+    this.client.publish(this.channel, JSON.stringify(data));
   }
 
   quit(){
