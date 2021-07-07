@@ -25,3 +25,8 @@ function command_print(ins, outs, context, cb) {
     // }, 1);
 }
 ```
+
+To run hyperflow
+```
+yarn hflow
+```
