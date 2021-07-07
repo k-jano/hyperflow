@@ -1,3 +1,5 @@
+const routine = require('../pub_sub/routine');
+
 var spawn = require('cross-spawn'),
     fs = require('fs');
 
@@ -45,10 +47,14 @@ function command_print(ins, outs, context, cb) {
     var exec = context.executor.executable,
         args = context.executor.args.join(' ');
 
-    setTimeout(function() {
-        console.log(exec, args);
-        cb(null, outs);
-    }, 1);
+    routine.routine(ins, outs, context, () => {
+        cb(null, outs)
+    })
+
+    // setTimeout(function() {
+    //     console.log(exec, args);
+    //     cb(null, outs);
+    // }, 1);
 }
 
 function command_notifyevents(ins, outs, context, cb) {

@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "node bin/hflow start-server",
-    "hflow": "node ./bin/hflow.js run ./examples/Sqrsum2"
+    "hflow": "node ./bin/hflow.js run ./examples/Montage2-degree025-619tasks --var=\"function=command_print\""
   },
   "dependencies": {
     "@dagrejs/graphlib": "^2.1.4",
