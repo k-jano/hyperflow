@@ -44,9 +44,15 @@ function command(ins, outs, context, cb) {
 
 function command_print(ins, outs, context, cb) {
     console.log("Executing", context.appId, context.procId, context.firingId);
-    var exec = context.executor.executable,
-        args = context.executor.args.join(' ');
+    var exec = context.executor.executable
+        //args = context.executor.args.join(' ');
 
+    var args = null
+    if (context.executor.args) {
+        args = context.executor.args.join(' ')
+    } else {
+        args = ''
+    }
     routine.routine(ins, outs, context, () => {
         cb(null, outs)
     })

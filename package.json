@@ -10,7 +10,13 @@
   },
   "scripts": {
     "start": "node bin/hflow start-server",
-    "hflow": "node ./bin/hflow.js run ./examples/Montage2-degree025-619tasks --var=\"function=command_print\""
+    "hflow": "node ./bin/hflow.js run ./examples/Montage2-degree025-619tasks --var=\"function=command_print\"",
+    "hflow_1000Genome": "node ./bin/hflow.js run ./examples/1000Genome --var=\"function=command_print\"",
+    "hflow_1000Genome_lg": "node ./bin/hflow.js run ./examples/1000Genome_lg --var=\"function=command_print\"",
+    "hflow_Montage_lg": "node ./bin/hflow.js run ./examples/Montage_lg --var=\"function=command_print\"",
+    "hflow_Montage_sm": "node ./bin/hflow.js run ./examples/Montage_sm --var=\"function=command_print\"",
+    "hflow_Montage_md": "node ./bin/hflow.js run ./examples/Montage_md --var=\"function=command_print\"",
+    "hflow_SoyKB_sm": "node ./bin/hflow.js run ./examples/SoyKB_sm --var=\"function=command_print\""
   },
   "dependencies": {
     "@dagrejs/graphlib": "^2.1.4",

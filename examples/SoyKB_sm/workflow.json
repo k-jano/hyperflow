@@ -1,0 +1,4426 @@
+{
+  "name": "soykb-0",
+  "processes": [
+    {
+      "name": "alignment_to_reference",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 3.305,
+          "avgCPU": 89.0469,
+          "priority": 20,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "outs": [
+        12
+      ]
+    },
+    {
+      "name": "sort_sam",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 4.049,
+          "avgCPU": 61.7683,
+          "priority": 30,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        5,
+        12
+      ],
+      "outs": [
+        13,
+        14
+      ]
+    },
+    {
+      "name": "dedup",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 4.464,
+          "avgCPU": 79.3459,
+          "priority": 40,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        5,
+        13,
+        14
+      ],
+      "outs": [
+        15,
+        16
+      ]
+    },
+    {
+      "name": "add_replace",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 3.7,
+          "avgCPU": 67.5676,
+          "priority": 50,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        5,
+        15,
+        16
+      ],
+      "outs": [
+        17,
+        18
+      ]
+    },
+    {
+      "name": "realign_target_creator",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 94.983,
+          "avgCPU": 180.0575,
+          "priority": 60,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        18,
+        4,
+        5,
+        17,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        20
+      ]
+    },
+    {
+      "name": "indel_realign",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 13.326,
+          "avgCPU": 59.3952,
+          "priority": 70,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        20,
+        19,
+        1,
+        2,
+        18,
+        4,
+        5,
+        17,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        21,
+        22
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 188.053,
+          "avgCPU": 37.5304,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        21,
+        4,
+        5,
+        6,
+        22,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        23,
+        24
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 180.807,
+          "avgCPU": 31.3887,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        21,
+        4,
+        5,
+        6,
+        22,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        25,
+        26
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 170.629,
+          "avgCPU": 29.5008,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        21,
+        4,
+        5,
+        6,
+        22,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        27,
+        28
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 175.212,
+          "avgCPU": 31.4956,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        21,
+        4,
+        5,
+        6,
+        22,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        29,
+        30
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 171.681,
+          "avgCPU": 31.6494,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        21,
+        4,
+        5,
+        6,
+        22,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        31,
+        32
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 181.625,
+          "avgCPU": 32.5363,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        21,
+        4,
+        5,
+        6,
+        22,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        33,
+        34
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 171.187,
+          "avgCPU": 28.6132,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        21,
+        4,
+        5,
+        6,
+        22,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        35,
+        36
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 181.764,
+          "avgCPU": 31.8539,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        21,
+        4,
+        5,
+        6,
+        22,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        37,
+        38
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 177.392,
+          "avgCPU": 31.8814,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        21,
+        4,
+        5,
+        6,
+        22,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        39,
+        40
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 179.339,
+          "avgCPU": 33.7015,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        21,
+        4,
+        5,
+        6,
+        22,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        41,
+        42
+      ]
+    },
+    {
+      "name": "alignment_to_reference",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 8.678,
+          "avgCPU": 43.2703,
+          "priority": 20,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        43,
+        44,
+        19,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        45
+      ]
+    },
+    {
+      "name": "sort_sam",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 14.573,
+          "avgCPU": 23.0358,
+          "priority": 30,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        5,
+        45
+      ],
+      "outs": [
+        46,
+        47
+      ]
+    },
+    {
+      "name": "dedup",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 14.254,
+          "avgCPU": 29.0094,
+          "priority": 40,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        5,
+        46,
+        47
+      ],
+      "outs": [
+        48,
+        49
+      ]
+    },
+    {
+      "name": "add_replace",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 20.326,
+          "avgCPU": 17.4506,
+          "priority": 50,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        48,
+        5,
+        49
+      ],
+      "outs": [
+        50,
+        51
+      ]
+    },
+    {
+      "name": "realign_target_creator",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 94.088,
+          "avgCPU": 190.2814,
+          "priority": 60,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        50,
+        1,
+        51,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        52
+      ]
+    },
+    {
+      "name": "indel_realign",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 96.945,
+          "avgCPU": 7.168,
+          "priority": 70,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        50,
+        1,
+        51,
+        2,
+        4,
+        5,
+        52,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        53,
+        54
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 90.288,
+          "avgCPU": 88.6353,
+          "priority": 80,
+          "machine": "compute-7"
+        }
+      },
+      "ins": [
+        53,
+        19,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        54,
+        9,
+        10
+      ],
+      "outs": [
+        55,
+        56
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 72.948,
+          "avgCPU": 79.1742,
+          "priority": 80,
+          "machine": "compute-7"
+        }
+      },
+      "ins": [
+        53,
+        19,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        54,
+        9,
+        10
+      ],
+      "outs": [
+        57,
+        58
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 72.019,
+          "avgCPU": 83.3724,
+          "priority": 80,
+          "machine": "compute-7"
+        }
+      },
+      "ins": [
+        53,
+        19,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        54,
+        9,
+        10
+      ],
+      "outs": [
+        59,
+        60
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 72.948,
+          "avgCPU": 82.1996,
+          "priority": 80,
+          "machine": "compute-7"
+        }
+      },
+      "ins": [
+        53,
+        19,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        54,
+        9,
+        10
+      ],
+      "outs": [
+        61,
+        62
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 68.235,
+          "avgCPU": 75.7339,
+          "priority": 80,
+          "machine": "compute-7"
+        }
+      },
+      "ins": [
+        53,
+        19,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        54,
+        9,
+        10
+      ],
+      "outs": [
+        63,
+        64
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 77.36,
+          "avgCPU": 84.514,
+          "priority": 80,
+          "machine": "compute-7"
+        }
+      },
+      "ins": [
+        53,
+        19,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        54,
+        9,
+        10
+      ],
+      "outs": [
+        65,
+        66
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 66.052,
+          "avgCPU": 89.531,
+          "priority": 80,
+          "machine": "compute-7"
+        }
+      },
+      "ins": [
+        53,
+        19,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        54,
+        9,
+        10
+      ],
+      "outs": [
+        67,
+        68
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 73.031,
+          "avgCPU": 81.8926,
+          "priority": 80,
+          "machine": "compute-7"
+        }
+      },
+      "ins": [
+        53,
+        19,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        54,
+        9,
+        10
+      ],
+      "outs": [
+        69,
+        70
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 72.725,
+          "avgCPU": 80.836,
+          "priority": 80,
+          "machine": "compute-7"
+        }
+      },
+      "ins": [
+        53,
+        19,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        54,
+        9,
+        10
+      ],
+      "outs": [
+        71,
+        72
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 75.023,
+          "avgCPU": 84.8153,
+          "priority": 80,
+          "machine": "compute-7"
+        }
+      },
+      "ins": [
+        53,
+        19,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        54,
+        9,
+        10
+      ],
+      "outs": [
+        73,
+        74
+      ]
+    },
+    {
+      "name": "alignment_to_reference",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 8.546,
+          "avgCPU": 42.8388,
+          "priority": 20,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        4,
+        5,
+        6,
+        75,
+        7,
+        8,
+        76,
+        9,
+        10
+      ],
+      "outs": [
+        77
+      ]
+    },
+    {
+      "name": "sort_sam",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 13.666,
+          "avgCPU": 24.389,
+          "priority": 30,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        5,
+        77
+      ],
+      "outs": [
+        78,
+        79
+      ]
+    },
+    {
+      "name": "dedup",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 16.517,
+          "avgCPU": 27.2628,
+          "priority": 40,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        78,
+        5,
+        79
+      ],
+      "outs": [
+        80,
+        81
+      ]
+    },
+    {
+      "name": "add_replace",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 19.621,
+          "avgCPU": 17.4864,
+          "priority": 50,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        5,
+        80,
+        81
+      ],
+      "outs": [
+        82,
+        83
+      ]
+    },
+    {
+      "name": "realign_target_creator",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 94.542,
+          "avgCPU": 189.6215,
+          "priority": 60,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        82,
+        19,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        83
+      ],
+      "outs": [
+        84
+      ]
+    },
+    {
+      "name": "indel_realign",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 60.022,
+          "avgCPU": 12.8869,
+          "priority": 70,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        82,
+        19,
+        1,
+        84,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        83
+      ],
+      "outs": [
+        85,
+        86
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 144.451,
+          "avgCPU": 58.3167,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        85,
+        4,
+        5,
+        86,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        87,
+        88
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 122.285,
+          "avgCPU": 48.3772,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        85,
+        4,
+        5,
+        86,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        89,
+        90
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 120.497,
+          "avgCPU": 47.1124,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        85,
+        4,
+        5,
+        86,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        91,
+        92
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 124.111,
+          "avgCPU": 46.2997,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        85,
+        4,
+        5,
+        86,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        93,
+        94
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 116.222,
+          "avgCPU": 42.5728,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        85,
+        4,
+        5,
+        86,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        95,
+        96
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 127.963,
+          "avgCPU": 50.2911,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        85,
+        4,
+        5,
+        86,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        97,
+        98
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 119.757,
+          "avgCPU": 48.8581,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        85,
+        4,
+        5,
+        86,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        99,
+        100
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 123.441,
+          "avgCPU": 49.166,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        85,
+        4,
+        5,
+        86,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        101,
+        102
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 123.131,
+          "avgCPU": 50.8117,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        85,
+        4,
+        5,
+        86,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        103,
+        104
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 125.703,
+          "avgCPU": 44.7157,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        85,
+        4,
+        5,
+        86,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        105,
+        106
+      ]
+    },
+    {
+      "name": "alignment_to_reference",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 7.413,
+          "avgCPU": 48.0642,
+          "priority": 20,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        107,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        108,
+        10
+      ],
+      "outs": [
+        109
+      ]
+    },
+    {
+      "name": "sort_sam",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 14.22,
+          "avgCPU": 23.8256,
+          "priority": 30,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        109,
+        5
+      ],
+      "outs": [
+        110,
+        111
+      ]
+    },
+    {
+      "name": "dedup",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 14.898,
+          "avgCPU": 30.1114,
+          "priority": 40,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        5,
+        110,
+        111
+      ],
+      "outs": [
+        112,
+        113
+      ]
+    },
+    {
+      "name": "add_replace",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 19.938,
+          "avgCPU": 17.4491,
+          "priority": 50,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        5,
+        112,
+        113
+      ],
+      "outs": [
+        114,
+        115
+      ]
+    },
+    {
+      "name": "realign_target_creator",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 96.575,
+          "avgCPU": 187.5247,
+          "priority": 60,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        114,
+        19,
+        1,
+        2,
+        115,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        116
+      ]
+    },
+    {
+      "name": "indel_realign",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 91.986,
+          "avgCPU": 7.9773,
+          "priority": 70,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        116,
+        114,
+        19,
+        1,
+        2,
+        115,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        117,
+        118
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 92.72,
+          "avgCPU": 85.4864,
+          "priority": 80,
+          "machine": "compute-7"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        117,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        118,
+        10
+      ],
+      "outs": [
+        119,
+        120
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 62.784,
+          "avgCPU": 85.7527,
+          "priority": 80,
+          "machine": "compute-7"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        117,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        118,
+        10
+      ],
+      "outs": [
+        121,
+        122
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 71.334,
+          "avgCPU": 80.9095,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        117,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        118,
+        10
+      ],
+      "outs": [
+        123,
+        124
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 73.914,
+          "avgCPU": 85.0326,
+          "priority": 80,
+          "machine": "compute-7"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        117,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        118,
+        10
+      ],
+      "outs": [
+        125,
+        126
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 70.518,
+          "avgCPU": 69.2391,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        117,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        118,
+        10
+      ],
+      "outs": [
+        127,
+        128
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 83.283,
+          "avgCPU": 77.771,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        117,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        118,
+        10
+      ],
+      "outs": [
+        129,
+        130
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 73.201,
+          "avgCPU": 74.7176,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        117,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        118,
+        10
+      ],
+      "outs": [
+        131,
+        132
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 68.893,
+          "avgCPU": 79.2925,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        117,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        118,
+        10
+      ],
+      "outs": [
+        133,
+        134
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 66.767,
+          "avgCPU": 81.0685,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        117,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        118,
+        10
+      ],
+      "outs": [
+        135,
+        136
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 70.857,
+          "avgCPU": 82.7131,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        117,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        118,
+        10
+      ],
+      "outs": [
+        137,
+        138
+      ]
+    },
+    {
+      "name": "alignment_to_reference",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 6.541,
+          "avgCPU": 52.3467,
+          "priority": 20,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        139,
+        140,
+        19,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        141
+      ]
+    },
+    {
+      "name": "sort_sam",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 13.279,
+          "avgCPU": 25.5742,
+          "priority": 30,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        5,
+        141
+      ],
+      "outs": [
+        142,
+        143
+      ]
+    },
+    {
+      "name": "dedup",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 6.924,
+          "avgCPU": 49.5523,
+          "priority": 40,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        5,
+        142,
+        143
+      ],
+      "outs": [
+        144,
+        145
+      ]
+    },
+    {
+      "name": "add_replace",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 3.382,
+          "avgCPU": 71.7327,
+          "priority": 50,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        5,
+        144,
+        145
+      ],
+      "outs": [
+        146,
+        147
+      ]
+    },
+    {
+      "name": "realign_target_creator",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 94.072,
+          "avgCPU": 182.0627,
+          "priority": 60,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        147,
+        4,
+        5,
+        146,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        148
+      ]
+    },
+    {
+      "name": "indel_realign",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 37.88,
+          "avgCPU": 21.18,
+          "priority": 70,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        148,
+        2,
+        147,
+        4,
+        5,
+        146,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        149,
+        150
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 208.817,
+          "avgCPU": 33.2214,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        149,
+        2,
+        4,
+        5,
+        6,
+        150,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        151,
+        152
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 195.454,
+          "avgCPU": 28.1191,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        149,
+        2,
+        4,
+        5,
+        6,
+        150,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        153,
+        154
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 198.141,
+          "avgCPU": 28.615,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        149,
+        2,
+        4,
+        5,
+        6,
+        150,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        155,
+        156
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 205.023,
+          "avgCPU": 30.9648,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        149,
+        2,
+        4,
+        5,
+        6,
+        150,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        157,
+        158
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 194.896,
+          "avgCPU": 25.8153,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        149,
+        2,
+        4,
+        5,
+        6,
+        150,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        159,
+        160
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 199.874,
+          "avgCPU": 30.0604,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        149,
+        2,
+        4,
+        5,
+        6,
+        150,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        161,
+        162
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 195.912,
+          "avgCPU": 25.3231,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        149,
+        2,
+        4,
+        5,
+        6,
+        150,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        163,
+        164
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 199.98,
+          "avgCPU": 27.3527,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        149,
+        2,
+        4,
+        5,
+        6,
+        150,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        165,
+        166
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 201.088,
+          "avgCPU": 30.5791,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        149,
+        2,
+        4,
+        5,
+        6,
+        150,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        167,
+        168
+      ]
+    },
+    {
+      "name": "haplotype_caller",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 201.714,
+          "avgCPU": 28.293,
+          "priority": 80,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        149,
+        2,
+        4,
+        5,
+        6,
+        150,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        169,
+        170
+      ]
+    },
+    {
+      "name": "merge_gcvf",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 2562.381,
+          "avgCPU": 98.5544,
+          "priority": 90,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        152,
+        56,
+        74,
+        90,
+        106,
+        129,
+        34,
+        38,
+        2,
+        121,
+        30,
+        31,
+        70,
+        158,
+        131,
+        63,
+        59,
+        5,
+        61,
+        92,
+        25,
+        29,
+        58,
+        69,
+        126,
+        160,
+        124,
+        151,
+        135,
+        26,
+        164,
+        36,
+        153,
+        89,
+        87,
+        162,
+        1,
+        105,
+        42,
+        68,
+        100,
+        133,
+        127,
+        119,
+        97,
+        33,
+        125,
+        98,
+        7,
+        40,
+        130,
+        170,
+        32,
+        96,
+        93,
+        41,
+        65,
+        28,
+        57,
+        165,
+        19,
+        169,
+        94,
+        73,
+        104,
+        8,
+        137,
+        62,
+        120,
+        55,
+        95,
+        123,
+        159,
+        64,
+        72,
+        99,
+        155,
+        9,
+        157,
+        167,
+        154,
+        71,
+        136,
+        23,
+        132,
+        10,
+        122,
+        88,
+        168,
+        39,
+        6,
+        24,
+        128,
+        166,
+        134,
+        156,
+        66,
+        60,
+        27,
+        102,
+        37,
+        171,
+        161,
+        91,
+        35,
+        4,
+        163,
+        101,
+        103,
+        67,
+        138
+      ],
+      "outs": [
+        172,
+        173
+      ]
+    },
+    {
+      "name": "genotype_gvcfs",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 147.691,
+          "avgCPU": 68.8227,
+          "priority": 90,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        152,
+        56,
+        23,
+        10,
+        88,
+        151,
+        19,
+        6,
+        24,
+        120,
+        8,
+        55,
+        2,
+        87,
+        1,
+        119,
+        4,
+        5,
+        7,
+        9
+      ],
+      "outs": [
+        174,
+        175
+      ]
+    },
+    {
+      "name": "genotype_gvcfs",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 140.388,
+          "avgCPU": 65.116,
+          "priority": 90,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        25,
+        58,
+        154,
+        90,
+        10,
+        122,
+        57,
+        19,
+        5,
+        6,
+        8,
+        26,
+        153,
+        89,
+        2,
+        121,
+        1,
+        4,
+        7,
+        9
+      ],
+      "outs": [
+        176,
+        177
+      ]
+    },
+    {
+      "name": "genotype_gvcfs",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 127.217,
+          "avgCPU": 69.0222,
+          "priority": 90,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        9,
+        28,
+        10,
+        124,
+        19,
+        6,
+        8,
+        2,
+        156,
+        123,
+        60,
+        27,
+        1,
+        155,
+        59,
+        91,
+        4,
+        5,
+        7,
+        92
+      ],
+      "outs": [
+        178,
+        179
+      ]
+    },
+    {
+      "name": "genotype_gvcfs",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 147.72,
+          "avgCPU": 65.1158,
+          "priority": 90,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        29,
+        93,
+        126,
+        10,
+        19,
+        94,
+        6,
+        8,
+        62,
+        2,
+        1,
+        30,
+        158,
+        125,
+        4,
+        5,
+        61,
+        7,
+        9,
+        157
+      ],
+      "outs": [
+        180,
+        181
+      ]
+    },
+    {
+      "name": "genotype_gvcfs",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 128.887,
+          "avgCPU": 63.8396,
+          "priority": 90,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        32,
+        96,
+        160,
+        10,
+        19,
+        6,
+        128,
+        8,
+        127,
+        2,
+        159,
+        64,
+        1,
+        31,
+        95,
+        63,
+        4,
+        5,
+        7,
+        9
+      ],
+      "outs": [
+        182,
+        183
+      ]
+    },
+    {
+      "name": "genotype_gvcfs",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 138.311,
+          "avgCPU": 72.0377,
+          "priority": 90,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        65,
+        10,
+        19,
+        5,
+        129,
+        6,
+        8,
+        34,
+        2,
+        66,
+        162,
+        1,
+        97,
+        161,
+        33,
+        4,
+        98,
+        7,
+        9,
+        130
+      ],
+      "outs": [
+        184,
+        185
+      ]
+    },
+    {
+      "name": "genotype_gvcfs",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 125.269,
+          "avgCPU": 68.6411,
+          "priority": 90,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        132,
+        10,
+        19,
+        6,
+        8,
+        164,
+        36,
+        2,
+        1,
+        68,
+        100,
+        131,
+        99,
+        35,
+        4,
+        5,
+        163,
+        7,
+        9,
+        67
+      ],
+      "outs": [
+        186,
+        187
+      ]
+    },
+    {
+      "name": "genotype_gvcfs",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 122.982,
+          "avgCPU": 68.7109,
+          "priority": 90,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        69,
+        10,
+        165,
+        19,
+        6,
+        8,
+        38,
+        166,
+        134,
+        2,
+        1,
+        37,
+        70,
+        133,
+        4,
+        5,
+        102,
+        101,
+        7,
+        9
+      ],
+      "outs": [
+        188,
+        189
+      ]
+    },
+    {
+      "name": "genotype_gvcfs",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 136.178,
+          "avgCPU": 71.6423,
+          "priority": 90,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        71,
+        136,
+        10,
+        19,
+        168,
+        135,
+        39,
+        6,
+        104,
+        8,
+        2,
+        1,
+        72,
+        4,
+        5,
+        7,
+        103,
+        40,
+        9,
+        167
+      ],
+      "outs": [
+        190,
+        191
+      ]
+    },
+    {
+      "name": "genotype_gvcfs",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 128.483,
+          "avgCPU": 70.1213,
+          "priority": 90,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        170,
+        74,
+        41,
+        10,
+        106,
+        19,
+        169,
+        73,
+        6,
+        8,
+        137,
+        2,
+        1,
+        105,
+        42,
+        4,
+        5,
+        7,
+        9,
+        138
+      ],
+      "outs": [
+        192,
+        193
+      ]
+    },
+    {
+      "name": "combine_variants",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 5.643,
+          "avgCPU": 167.1806,
+          "priority": 100,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        180,
+        181,
+        188,
+        184,
+        190,
+        189,
+        192,
+        186,
+        10,
+        178,
+        19,
+        174,
+        5,
+        6,
+        8,
+        191,
+        182,
+        183,
+        185,
+        2,
+        175,
+        1,
+        187,
+        193,
+        176,
+        179,
+        4,
+        177,
+        7,
+        9
+      ],
+      "outs": [
+        194,
+        195
+      ]
+    },
+    {
+      "name": "select_variants_snp",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 140.851,
+          "avgCPU": 45.9841,
+          "priority": 110,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        195,
+        10
+      ],
+      "outs": [
+        196
+      ]
+    },
+    {
+      "name": "filtering_snp",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 67.509,
+          "avgCPU": 12.0799,
+          "priority": 120,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        196,
+        19,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        197,
+        198
+      ]
+    },
+    {
+      "name": "select_variants_indel",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 132.132,
+          "avgCPU": 48.0913,
+          "priority": 110,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        195,
+        10
+      ],
+      "outs": [
+        199
+      ]
+    },
+    {
+      "name": "filtering_indel",
+      "function": "{{function}}",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "unknown"
+        },
+        "traceInfo": {
+          "runtime": 69.113,
+          "avgCPU": 10.5942,
+          "priority": 120,
+          "machine": "compute-3"
+        }
+      },
+      "ins": [
+        19,
+        1,
+        2,
+        199,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outs": [
+        200,
+        201
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "name": "Gmax_275_v2.0.dict",
+      "size": 142561,
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "Gmax_275_v2.0.fa.pac",
+      "size": 244623820,
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "Gmax_275_v2.0.fa.fai",
+      "size": 41379,
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "USB-001_2.fastq",
+      "size": 23845,
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "Gmax_275_v2.0.fa.sa",
+      "size": 489247688,
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "software.tar.gz",
+      "size": 108988506,
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "Gmax_275_v2.0.fa.amb",
+      "size": 259156,
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "Gmax_275_v2.0.fa",
+      "size": 990744229,
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "Gmax_275_v2.0.fa.ann",
+      "size": 47448,
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "Gmax_275_v2.0.fa.bwt",
+      "size": 978495356,
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "chromosome.txt",
+      "size": 60,
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "USB-001_1.fastq",
+      "size": 23845,
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "20200407-225740-USB-001_aligned_reads.sam",
+      "size": 112561
+    },
+    {
+      "name": "20200407-225740-USB-001_sorted_reads.bai",
+      "size": 127424
+    },
+    {
+      "name": "20200407-225740-USB-001_sorted_reads.bam",
+      "size": 36576
+    },
+    {
+      "name": "20200407-225740-USB-001_deduped_reads.bai",
+      "size": 127424
+    },
+    {
+      "name": "20200407-225740-USB-001_deduped_reads.bam",
+      "size": 37469
+    },
+    {
+      "name": "20200407-225740-USB-001_addrepl.bam",
+      "size": 37955
+    },
+    {
+      "name": "20200407-225740-USB-001_addrepl.bai",
+      "size": 127424
+    },
+    {
+      "name": "Gmax_275_v2.0.dict",
+      "size": 142561,
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "20200407-225740-USB-001_intervals.list",
+      "size": 40
+    },
+    {
+      "name": "20200407-225740-USB-001_indel_realigned.bai",
+      "size": 127424
+    },
+    {
+      "name": "20200407-225740-USB-001_indel_realigned.bam",
+      "size": 39552
+    },
+    {
+      "name": "20200407-225740-USB-001_Chr01.vcf",
+      "size": 75727
+    },
+    {
+      "name": "20200407-225740-USB-001_Chr01.vcf.idx",
+      "size": 28448
+    },
+    {
+      "name": "20200407-225740-USB-001_Chr02.vcf",
+      "size": 59038
+    },
+    {
+      "name": "20200407-225740-USB-001_Chr02.vcf.idx",
+      "size": 28448
+    },
+    {
+      "name": "20200407-225740-USB-001_Chr03.vcf",
+      "size": 59038
+    },
+    {
+      "name": "20200407-225740-USB-001_Chr03.vcf.idx",
+      "size": 28448
+    },
+    {
+      "name": "20200407-225740-USB-001_Chr04.vcf",
+      "size": 59038
+    },
+    {
+      "name": "20200407-225740-USB-001_Chr04.vcf.idx",
+      "size": 28448
+    },
+    {
+      "name": "20200407-225740-USB-001_Chr05.vcf",
+      "size": 59038
+    },
+    {
+      "name": "20200407-225740-USB-001_Chr05.vcf.idx",
+      "size": 28448
+    },
+    {
+      "name": "20200407-225740-USB-001_Chr06.vcf.idx",
+      "size": 28448
+    },
+    {
+      "name": "20200407-225740-USB-001_Chr06.vcf",
+      "size": 59038
+    },
+    {
+      "name": "20200407-225740-USB-001_Chr07.vcf.idx",
+      "size": 28448
+    },
+    {
+      "name": "20200407-225740-USB-001_Chr07.vcf",
+      "size": 59038
+    },
+    {
+      "name": "20200407-225740-USB-001_Chr08.vcf.idx",
+      "size": 28448
+    },
+    {
+      "name": "20200407-225740-USB-001_Chr08.vcf",
+      "size": 59038
+    },
+    {
+      "name": "20200407-225740-USB-001_Chr09.vcf.idx",
+      "size": 28448
+    },
+    {
+      "name": "20200407-225740-USB-001_Chr09.vcf",
+      "size": 59038
+    },
+    {
+      "name": "20200407-225740-USB-001_Chr10.vcf",
+      "size": 59038
+    },
+    {
+      "name": "20200407-225740-USB-001_Chr10.vcf.idx",
+      "size": 28448
+    },
+    {
+      "name": "USB-002_2.fastq",
+      "size": 23845,
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "USB-002_1.fastq",
+      "size": 23845,
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "20200407-225740-USB-002_aligned_reads.sam",
+      "size": 112561
+    },
+    {
+      "name": "20200407-225740-USB-002_sorted_reads.bai",
+      "size": 127424
+    },
+    {
+      "name": "20200407-225740-USB-002_sorted_reads.bam",
+      "size": 36576
+    },
+    {
+      "name": "20200407-225740-USB-002_deduped_reads.bai",
+      "size": 127424
+    },
+    {
+      "name": "20200407-225740-USB-002_deduped_reads.bam",
+      "size": 37468
+    },
+    {
+      "name": "20200407-225740-USB-002_addrepl.bai",
+      "size": 127424
+    },
+    {
+      "name": "20200407-225740-USB-002_addrepl.bam",
+      "size": 37955
+    },
+    {
+      "name": "20200407-225740-USB-002_intervals.list",
+      "size": 40
+    },
+    {
+      "name": "20200407-225740-USB-002_indel_realigned.bai",
+      "size": 127424
+    },
+    {
+      "name": "20200407-225740-USB-002_indel_realigned.bam",
+      "size": 39553
+    },
+    {
+      "name": "20200407-225740-USB-002_Chr01.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-002_Chr01.vcf",
+      "size": 75728
+    },
+    {
+      "name": "20200407-225740-USB-002_Chr02.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-002_Chr02.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-002_Chr03.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-002_Chr03.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-002_Chr04.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-002_Chr04.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-002_Chr05.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-002_Chr05.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-002_Chr06.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-002_Chr06.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-002_Chr07.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-002_Chr07.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-002_Chr08.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-002_Chr08.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-002_Chr09.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-002_Chr09.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-002_Chr10.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-002_Chr10.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "USB-003_2.fastq",
+      "size": 23845,
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "USB-003_1.fastq",
+      "size": 23845,
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "20200407-225740-USB-003_aligned_reads.sam",
+      "size": 112561
+    },
+    {
+      "name": "20200407-225740-USB-003_sorted_reads.bam",
+      "size": 36576
+    },
+    {
+      "name": "20200407-225740-USB-003_sorted_reads.bai",
+      "size": 127424
+    },
+    {
+      "name": "20200407-225740-USB-003_deduped_reads.bai",
+      "size": 127424
+    },
+    {
+      "name": "20200407-225740-USB-003_deduped_reads.bam",
+      "size": 37469
+    },
+    {
+      "name": "20200407-225740-USB-003_addrepl.bam",
+      "size": 37953
+    },
+    {
+      "name": "20200407-225740-USB-003_addrepl.bai",
+      "size": 127424
+    },
+    {
+      "name": "20200407-225740-USB-003_intervals.list",
+      "size": 40
+    },
+    {
+      "name": "20200407-225740-USB-003_indel_realigned.bai",
+      "size": 127424
+    },
+    {
+      "name": "20200407-225740-USB-003_indel_realigned.bam",
+      "size": 39552
+    },
+    {
+      "name": "20200407-225740-USB-003_Chr01.vcf",
+      "size": 75728
+    },
+    {
+      "name": "20200407-225740-USB-003_Chr01.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-003_Chr02.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-003_Chr02.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-003_Chr03.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-003_Chr03.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-003_Chr04.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-003_Chr04.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-003_Chr05.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-003_Chr05.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-003_Chr06.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-003_Chr06.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-003_Chr07.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-003_Chr07.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-003_Chr08.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-003_Chr08.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-003_Chr09.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-003_Chr09.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-003_Chr10.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-003_Chr10.vcf",
+      "size": 59039
+    },
+    {
+      "name": "USB-004_2.fastq",
+      "size": 23845,
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "USB-004_1.fastq",
+      "size": 23845,
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "20200407-225740-USB-004_aligned_reads.sam",
+      "size": 112561
+    },
+    {
+      "name": "20200407-225740-USB-004_sorted_reads.bai",
+      "size": 127424
+    },
+    {
+      "name": "20200407-225740-USB-004_sorted_reads.bam",
+      "size": 36576
+    },
+    {
+      "name": "20200407-225740-USB-004_deduped_reads.bai",
+      "size": 127424
+    },
+    {
+      "name": "20200407-225740-USB-004_deduped_reads.bam",
+      "size": 37468
+    },
+    {
+      "name": "20200407-225740-USB-004_addrepl.bai",
+      "size": 127424
+    },
+    {
+      "name": "20200407-225740-USB-004_addrepl.bam",
+      "size": 37953
+    },
+    {
+      "name": "20200407-225740-USB-004_intervals.list",
+      "size": 40
+    },
+    {
+      "name": "20200407-225740-USB-004_indel_realigned.bam",
+      "size": 39552
+    },
+    {
+      "name": "20200407-225740-USB-004_indel_realigned.bai",
+      "size": 127424
+    },
+    {
+      "name": "20200407-225740-USB-004_Chr01.vcf",
+      "size": 75728
+    },
+    {
+      "name": "20200407-225740-USB-004_Chr01.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-004_Chr02.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-004_Chr02.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-004_Chr03.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-004_Chr03.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-004_Chr04.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-004_Chr04.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-004_Chr05.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-004_Chr05.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-004_Chr06.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-004_Chr06.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-004_Chr07.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-004_Chr07.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-004_Chr08.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-004_Chr08.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-004_Chr09.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-004_Chr09.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "20200407-225740-USB-004_Chr10.vcf",
+      "size": 59039
+    },
+    {
+      "name": "20200407-225740-USB-004_Chr10.vcf.idx",
+      "size": 28449
+    },
+    {
+      "name": "USB-005_1.fastq",
+      "size": 23845,
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "USB-005_2.fastq",
+      "size": 23845,
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "20200407-225740-USB-005_aligned_reads.sam",
+      "size": 112561
+    },
+    {
+      "name": "20200407-225740-USB-005_sorted_reads.bam",
+      "size": 36576
+    },
+    {
+      "name": "20200407-225740-USB-005_sorted_reads.bai",
+      "size": 127424
+    },
+    {
+      "name": "20200407-225740-USB-005_deduped_reads.bam",
+      "size": 37469
+    },
+    {
+      "name": "20200407-225740-USB-005_deduped_reads.bai",
+      "size": 127424
+    },
+    {
+      "name": "20200407-225740-USB-005_addrepl.bai",
+      "size": 127424
+    },
+    {
+      "name": "20200407-225740-USB-005_addrepl.bam",
+      "size": 37954
+    },
+    {
+      "name": "20200407-225740-USB-005_intervals.list",
+      "size": 40
+    },
+    {
+      "name": "20200407-225740-USB-005_indel_realigned.bam",
+      "size": 39553
+    },
+    {
+      "name": "20200407-225740-USB-005_indel_realigned.bai",
+      "size": 127424
+    },
+    {
+      "name": "20200407-225740-USB-005_Chr01.vcf.idx",
+      "size": 28448
+    },
+    {
+      "name": "20200407-225740-USB-005_Chr01.vcf",
+      "size": 75727
+    },
+    {
+      "name": "20200407-225740-USB-005_Chr02.vcf.idx",
+      "size": 28448
+    },
+    {
+      "name": "20200407-225740-USB-005_Chr02.vcf",
+      "size": 59038
+    },
+    {
+      "name": "20200407-225740-USB-005_Chr03.vcf.idx",
+      "size": 28448
+    },
+    {
+      "name": "20200407-225740-USB-005_Chr03.vcf",
+      "size": 59038
+    },
+    {
+      "name": "20200407-225740-USB-005_Chr04.vcf.idx",
+      "size": 28448
+    },
+    {
+      "name": "20200407-225740-USB-005_Chr04.vcf",
+      "size": 59038
+    },
+    {
+      "name": "20200407-225740-USB-005_Chr05.vcf.idx",
+      "size": 28448
+    },
+    {
+      "name": "20200407-225740-USB-005_Chr05.vcf",
+      "size": 59038
+    },
+    {
+      "name": "20200407-225740-USB-005_Chr06.vcf",
+      "size": 59038
+    },
+    {
+      "name": "20200407-225740-USB-005_Chr06.vcf.idx",
+      "size": 28448
+    },
+    {
+      "name": "20200407-225740-USB-005_Chr07.vcf.idx",
+      "size": 28448
+    },
+    {
+      "name": "20200407-225740-USB-005_Chr07.vcf",
+      "size": 59038
+    },
+    {
+      "name": "20200407-225740-USB-005_Chr08.vcf",
+      "size": 59038
+    },
+    {
+      "name": "20200407-225740-USB-005_Chr08.vcf.idx",
+      "size": 28448
+    },
+    {
+      "name": "20200407-225740-USB-005_Chr09.vcf",
+      "size": 59038
+    },
+    {
+      "name": "20200407-225740-USB-005_Chr09.vcf.idx",
+      "size": 28448
+    },
+    {
+      "name": "20200407-225740-USB-005_Chr10.vcf.idx",
+      "size": 28448
+    },
+    {
+      "name": "20200407-225740-USB-005_Chr10.vcf",
+      "size": 59038
+    },
+    {
+      "name": "haplotype-files.list",
+      "size": 1700,
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "20200407-225740-mergeGVCF.vcf.idx",
+      "size": 28886
+    },
+    {
+      "name": "20200407-225740-mergeGVCF.vcf",
+      "size": 104389
+    },
+    {
+      "name": "20200407-225740-GVCF_Chr01.vcf",
+      "size": 66691
+    },
+    {
+      "name": "20200407-225740-GVCF_Chr01.vcf.idx",
+      "size": 28584
+    },
+    {
+      "name": "20200407-225740-GVCF_Chr02.vcf.idx",
+      "size": 28497
+    },
+    {
+      "name": "20200407-225740-GVCF_Chr02.vcf",
+      "size": 59101
+    },
+    {
+      "name": "20200407-225740-GVCF_Chr03.vcf.idx",
+      "size": 28497
+    },
+    {
+      "name": "20200407-225740-GVCF_Chr03.vcf",
+      "size": 59101
+    },
+    {
+      "name": "20200407-225740-GVCF_Chr04.vcf",
+      "size": 59101
+    },
+    {
+      "name": "20200407-225740-GVCF_Chr04.vcf.idx",
+      "size": 28497
+    },
+    {
+      "name": "20200407-225740-GVCF_Chr05.vcf.idx",
+      "size": 28497
+    },
+    {
+      "name": "20200407-225740-GVCF_Chr05.vcf",
+      "size": 59101
+    },
+    {
+      "name": "20200407-225740-GVCF_Chr06.vcf",
+      "size": 59101
+    },
+    {
+      "name": "20200407-225740-GVCF_Chr06.vcf.idx",
+      "size": 28497
+    },
+    {
+      "name": "20200407-225740-GVCF_Chr07.vcf.idx",
+      "size": 28497
+    },
+    {
+      "name": "20200407-225740-GVCF_Chr07.vcf",
+      "size": 59101
+    },
+    {
+      "name": "20200407-225740-GVCF_Chr08.vcf.idx",
+      "size": 28497
+    },
+    {
+      "name": "20200407-225740-GVCF_Chr08.vcf",
+      "size": 59101
+    },
+    {
+      "name": "20200407-225740-GVCF_Chr09.vcf",
+      "size": 59101
+    },
+    {
+      "name": "20200407-225740-GVCF_Chr09.vcf.idx",
+      "size": 28497
+    },
+    {
+      "name": "20200407-225740-GVCF_Chr10.vcf",
+      "size": 59101
+    },
+    {
+      "name": "20200407-225740-GVCF_Chr10.vcf.idx",
+      "size": 28497
+    },
+    {
+      "name": "20200407-225740-All.vcf.idx",
+      "size": 28577
+    },
+    {
+      "name": "20200407-225740-All.vcf",
+      "size": 70314
+    },
+    {
+      "name": "20200407-225740-All.vcf_snp_only.vcf",
+      "size": 71866
+    },
+    {
+      "name": "20200407-225740-All_filtered_snp.vcf",
+      "size": 74686
+    },
+    {
+      "name": "20200407-225740-All_filtered_snp.vcf.idx",
+      "size": 28546
+    },
+    {
+      "name": "20200407-225740-All.vcf_indel_only.vcf",
+      "size": 67140
+    },
+    {
+      "name": "20200407-225740-All_filtered_indel.vcf.idx",
+      "size": 28576
+    },
+    {
+      "name": "20200407-225740-All_filtered_indel.vcf",
+      "size": 69861
+    }
+  ],
+  "ins": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    19,
+    43,
+    44,
+    75,
+    76,
+    107,
+    108,
+    139,
+    140,
+    171
+  ],
+  "outs": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201
+  ],
+  "machines": [
+    {
+      "nodeName": "compute-3",
+      "system": "linux",
+      "architecture": "x86_64",
+      "memory": 131795984,
+      "release": "4.15.0-91-generic",
+      "cpu": {
+        "count": 48,
+        "vendor": "GenuineIntel",
+        "speed": 1200
+      }
+    },
+    {
+      "nodeName": "compute-7",
+      "system": "linux",
+      "architecture": "x86_64",
+      "memory": 131795984,
+      "release": "4.15.0-91-generic",
+      "cpu": {
+        "count": 48,
+        "vendor": "GenuineIntel",
+        "speed": 1200
+      }
+    }
+  ],
+  "traceInfo": {
+    "makespan": 9323
+  }
+}
